@@ -32,7 +32,8 @@ const Form = styled.form`
 
 export default function Search({ setResults }) {
   const [searchField, setSearchField] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
+  //let data;
   useEffect(() => {
     setData(getData());
   }, []);
@@ -44,8 +45,10 @@ export default function Search({ setResults }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let found = search(data, searchField);
-    setResults(found);
+    data.then((mac) => {
+      let found = search(mac, searchField);
+      setResults(found);
+    });
   }
 
   return (

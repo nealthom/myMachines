@@ -19,8 +19,8 @@ const CardListWrapper = styled.ul`
 export function CardList({ results }) {
   return (
     <CardListWrapper>
-      {results.map(game => (
-        <Card game={game} />
+      {results.map((game) => (
+        <Card key={game._id} game={game} />
       ))}
     </CardListWrapper>
   );
