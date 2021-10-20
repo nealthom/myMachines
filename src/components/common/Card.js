@@ -6,32 +6,34 @@ const CardWrapper = styled.div`
   max-width: 300px;
   background: #333;
   border: 1px solid #eee;
-  padding: 16px;
+  padding: 6px;
   box-sizing: border-box;
   border-radius: 4px;
   margin-bottom: 16px;
 
   @media (min-width: 768px) {
-    min-height: 250px;
+    min-height: 50px;
     margin-right: 10px;
   }
 
-  > div {
+  > ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-direction: row-reverse;
+    /* align-items: center; */
+    justify-content: space-around;
+    /* text-align: center; */
+    font-size: 8px;
+    height: 50px;
   }
 `;
 
 export function Card({ game }) {
   return (
     <CardWrapper>
-      <div>
+      <ul>
         <h1>{game.Name}</h1>
-        <h2>{game.Location}</h2>
-      </div>
+        <h1>{game.Location}</h1>
+      </ul>
     </CardWrapper>
   );
 }
