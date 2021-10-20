@@ -59,7 +59,7 @@ export default function Search({ setResults }) {
             name="machine"
             placeholder="Search Machines"
             type="text"
-            autocomplete="off"
+            autoComplete="off"
             value={searchField}
             onChange={handleInputChange}
           />

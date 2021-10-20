@@ -10,6 +10,7 @@ const Input = styled.input`
   width: 100%;
   box-sizing: border-box;
   height: 40px;
+  
 `;
 
 export { Input };
